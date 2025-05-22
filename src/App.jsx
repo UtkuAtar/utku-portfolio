@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
@@ -11,17 +10,13 @@ import Contact from "./pages/Contact";
 export default function App() {
   return (
     <Router>
-      {/* Tüm ekranı kaplayan yapı */}
-      <div className="d-flex min-vh-100">
-        {/* Sabit sol menü */}
-        <Sidebar />
-
-        {/* Sağ taraf: içerik + footer */}
-        <div
-          className="flex-grow-1 d-flex flex-column"
-          style={{ marginLeft: "220px" }} // Sidebar genişliğiyle eşit
-        >
-          <main className="flex-grow-1">
+      <div
+        className="d-flex flex-column min-vh-100"
+        style={{ backgroundColor: "#1f232a", color: "white" }}
+      >
+        <div className="d-flex flex-grow-1">
+          <Sidebar />
+          <main className="flex-grow-1 p-4">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -30,10 +25,8 @@ export default function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
-
-          {/* Footer her zaman sayfanın altında kalır */}
-          <Footer />
         </div>
+        <Footer />
       </div>
     </Router>
   );

@@ -77,4 +77,26 @@ html, body, #root {
 * {
   box-sizing: border-box;
 }
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1f232a;
+  color: white;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1e2225;
+
+  color: white;
+}
+
+
 
