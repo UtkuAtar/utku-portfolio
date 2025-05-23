@@ -1,6 +1,6 @@
-
 import React, { useEffect, useState } from "react";
 import { FaGamepad, FaCode, FaGlobe } from "react-icons/fa";
+import MobileMenu from "../components/MobileMenu"; // hamburger menü bileşeni
 
 export default function Projects() {
   const [isMobile, setIsMobile] = useState(false);
@@ -31,33 +31,36 @@ export default function Projects() {
   ];
 
   return (
-    <section
-      className="bg-dark text-white py-5"
-      style={{
-        minHeight: "100vh",
-        marginLeft: isMobile ? "0px" : "220px",
-        padding: "0 15px"
-      }}
-    >
-      <div className="container">
-        <h2 className="fw-bold text-center mb-5">Projelerim</h2>
-        <div className="row justify-content-center">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="col-12 col-md-10 mb-4"
-            >
-              <div className="bg-light text-dark p-4 rounded-4 shadow-sm d-flex flex-column flex-md-row align-items-start hover-glow transition-all h-100">
-                {project.icon}
-                <div>
-                  <h5 className="fw-bold">{project.title}</h5>
-                  <p className="mb-0">{project.desc}</p>
+    <>
+      <MobileMenu />
+      <section
+        className="bg-dark text-white py-5"
+        style={{
+          minHeight: "100vh",
+          marginLeft: isMobile ? "0px" : "220px",
+          padding: "0 15px"
+        }}
+      >
+        <div className="container">
+          <h2 className="fw-bold text-center mb-5">Projelerim</h2>
+          <div className="row justify-content-center">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="col-12 col-md-10 mb-4"
+              >
+                <div className="bg-light text-dark p-4 rounded-4 shadow-sm d-flex flex-column flex-md-row align-items-start hover-glow transition-all h-100">
+                  {project.icon}
+                  <div>
+                    <h5 className="fw-bold">{project.title}</h5>
+                    <p className="mb-0">{project.desc}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
