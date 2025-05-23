@@ -10,12 +10,20 @@ import {
 
 export default function About() {
   return (
-    <section className="bg-dark text-white py-5" style={{ minHeight: "100vh", marginLeft: "220px" }}>
+    <section
+      className="bg-dark text-white py-5"
+      style={{
+        minHeight: "100vh",
+        marginLeft: window.innerWidth >= 768 ? "220px" : "0px", // responsive margin
+        paddingLeft: "15px",
+        paddingRight: "15px"
+      }}
+    >
       <div className="container">
         <div className="row justify-content-center align-items-center">
-          <div className="col-lg-10">
+          <div className="col-12 col-md-10">
             <div className="card bg-secondary text-light shadow-lg border-0 p-4 rounded-4">
-              <div className="d-flex align-items-start mb-3">
+              <div className="d-flex align-items-start mb-3 flex-wrap">
                 <FaUserAlt size={32} className="me-3 mt-1 text-primary" />
                 <h2 className="fw-bold">Hakkımda</h2>
               </div>
@@ -46,14 +54,14 @@ export default function About() {
                 <h4 className="text-info d-flex align-items-center mb-3">
                   <FaGraduationCap className="me-2" /> Eğitim
                 </h4>
-                <div className="ps-3">
-                  <div className="d-flex align-items-center mb-2 hover-zoom text-light">
+                <div className="ps-1 ps-md-3">
+                  <div className="d-flex align-items-start mb-2 hover-zoom text-light">
                     <FaSchool className="me-2 text-warning" />
-                    Bilecik Refik Arslan Öztürk Fen Lisesi
+                    <span>Bilecik Refik Arslan Öztürk Fen Lisesi</span>
                   </div>
-                  <div className="d-flex align-items-center hover-zoom text-light">
+                  <div className="d-flex align-items-start hover-zoom text-light">
                     <FaUniversity className="me-2 text-success" />
-                    Balıkesir Üniversitesi Bilgisayar Mühendisliği (2022)
+                    <span>Balıkesir Üniversitesi Bilgisayar Mühendisliği (2022)</span>
                   </div>
                 </div>
               </div>
@@ -63,14 +71,14 @@ export default function About() {
                 <h4 className="text-info d-flex align-items-center mb-3">
                   <FaLanguage className="me-2" /> Diller
                 </h4>
-                <div className="ps-3">
-                  <div className="d-flex align-items-center mb-2 hover-zoom text-light">
+                <div className="ps-1 ps-md-3">
+                  <div className="d-flex align-items-start mb-2 hover-zoom text-light">
                     <FaGlobeEurope className="me-2 text-primary" />
-                    İngilizce <span className="ms-2 text-white-50">(B2)</span>
+                    <span>İngilizce <span className="ms-2 text-white-50">(B2)</span></span>
                   </div>
-                  <div className="d-flex align-items-center hover-zoom text-light">
+                  <div className="d-flex align-items-start hover-zoom text-light">
                     <FaGlobeEurope className="me-2 text-primary" />
-                    Almanca <span className="ms-2 text-white-50">(A1)</span>
+                    <span>Almanca <span className="ms-2 text-white-50">(A1)</span></span>
                   </div>
                 </div>
               </div>

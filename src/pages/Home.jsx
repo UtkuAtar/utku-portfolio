@@ -1,6 +1,20 @@
+import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/background.jpg";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
   return (
     <section
       style={{
@@ -9,18 +23,22 @@ export default function Home() {
         backgroundPosition: "center",
         minHeight: "100vh",
         color: "white",
-        marginLeft: "220px",
+        marginLeft: isMobile ? "0px" : "220px",
+        padding: "0 15px",
       }}
       className="d-flex flex-column justify-content-center align-items-center text-center"
     >
-      <h1 className="display-4 fw-bold">Utku Atar</h1>
-      <p className="lead">
+      <h1 className="display-5 fw-bold">Utku Atar</h1>
+
+      <p className="lead px-2 px-md-5">
         Full Stack Geliştirici • SwiftUI ile modern iOS uygulama geliştirme • WEB geliştirme
       </p>
-      <a href="/contact" className="btn btn-primary btn-lg my-3">
+
+      <a href="/contact" className="btn btn-primary btn-lg my-3 w-15 w-md-auto">
         İletişim İçin Tıkla!
       </a>
-      <div className="d-flex gap-3 fs-4">
+
+      <div className="d-flex gap-4 fs-4 flex-wrap justify-content-center mt-3">
         <a
           href="https://github.com/UtkuAtar"
           target="_blank"

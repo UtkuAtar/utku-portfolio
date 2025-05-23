@@ -4,11 +4,14 @@ import profilePic from "../assets/profile.jpg";
 export default function Sidebar() {
   return (
     <div
-      className="bg-dark text-white d-flex flex-column align-items-center py-4 px-2 position-fixed"
+      className="bg-dark text-white d-none d-md-flex flex-column align-items-center py-4 px-2 position-fixed"
       style={{
         width: "220px",
         height: "100vh",
-        borderRight: "2px solid #2b2f33"
+        borderRight: "2px solid #2b2f33",
+        top: 0,
+        left: 0,
+        zIndex: 1030,
       }}
     >
       <img

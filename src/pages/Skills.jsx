@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaDatabase } from 'react-icons/fa';
 import { SiSwift } from 'react-icons/si';
 
@@ -15,8 +15,24 @@ const skills = [
 ];
 
 export default function Skills() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <section className="bg-dark text-white min-vh-100" style={{ marginLeft: '220px' }}>
+    <section
+      className="bg-dark text-white min-vh-100"
+      style={{
+        marginLeft: isMobile ? '0px' : '220px',
+        paddingLeft: '15px',
+        paddingRight: '15px',
+      }}
+    >
       <div className="container py-5">
         <h2 className="text-center fw-bold mb-4 border-bottom pb-2">Yeteneklerim</h2>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">

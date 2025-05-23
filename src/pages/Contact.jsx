@@ -5,9 +5,12 @@ export default function Contact() {
   return (
     <section
       className="text-white py-5"
-      style={{ backgroundColor: '#6c757d', marginLeft: '220px' }}
+      style={{
+        backgroundColor: '#6c757d',
+        marginLeft: '220px',
+      }}
     >
-      <div className="container">
+      <div className="container px-3 px-md-5">
         <h2 className="text-center fw-bold mb-5">İletişim</h2>
 
         <div
@@ -49,7 +52,7 @@ export default function Contact() {
               <textarea className="form-control" id="message" rows="4" placeholder="Mesajınızı yazın"></textarea>
             </div>
 
-            <button type="submit" className="btn btn-primary">Gönder</button>
+            <button type="submit" className="btn btn-primary w-100">Gönder</button>
           </form>
         </div>
       </div>

@@ -1,10 +1,9 @@
+import React from "react";
+
 export default function Footer() {
   return (
-    <footer
-      className="text-center py-3"
-      style={{ backgroundColor: "#1f232a", color: "white" }}
-    >
-      <small>&copy; 2025 Utku Atar. Tüm hakları saklıdır.</small>
+    <footer className="bg-dark text-white text-center py-3 mt-auto">
+      <small>&copy; {new Date().getFullYear()} Utku Atar | Tüm Hakları Saklıdır.</small>
     </footer>
   );
 }
