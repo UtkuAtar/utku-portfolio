@@ -30,7 +30,7 @@ export default function Home() {
           <i className="bi bi-github"></i>
         </a>
         <a
-          href="https://linkedin.com/Utku-Atar"
+          href="https://www.linkedin.com/in/utku-atar-00696a254/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white"
