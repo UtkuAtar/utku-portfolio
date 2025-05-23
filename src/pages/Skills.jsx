@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaDatabase } from 'react-icons/fa';
 import { SiSwift } from 'react-icons/si';
-import MobileMenu from '../components/MobileMenu'; // hamburger menü eklendi
+import MobileMenu from '../components/MobileMenu';
 
 const skills = [
   { name: 'SwiftUI', icon: <SiSwift size={40} />, level: 75 },

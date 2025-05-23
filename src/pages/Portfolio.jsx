@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaGamepad, FaCode, FaGlobe } from "react-icons/fa";
-import MobileMenu from "../components/MobileMenu"; // hamburger menü bileşeni
+import MobileMenu from "../components/MobileMenu";
 
 export default function Projects() {
   const [isMobile, setIsMobile] = useState(false);

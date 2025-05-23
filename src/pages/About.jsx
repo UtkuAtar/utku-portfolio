@@ -7,7 +7,7 @@ import {
   FaLanguage,
   FaGlobeEurope
 } from "react-icons/fa";
-import MobileMenu from "../components/MobileMenu"; // hamburger menü bileşeni
+import MobileMenu from "../components/MobileMenu";
 
 export default function About() {
   const [isMobile, setIsMobile] = useState(false);
@@ -26,7 +26,7 @@ export default function About() {
         className="bg-dark text-white py-5"
         style={{
           minHeight: "100vh",
-          marginLeft: isMobile ? "0px" : "220px", // responsive margin
+          marginLeft: isMobile ? "0px" : "220px",
           paddingLeft: "15px",
           paddingRight: "15px"
         }}
@@ -60,7 +60,7 @@ export default function About() {
                   Daha fazlası için <a href="/contact" className="text-decoration-none text-info fw-bold">iletişim</a> bölümünden bana ulaşabilirsiniz.
                 </p>
 
-                {/* Eğitim Bölümü */}
+
                 <hr className="text-light my-4" />
                 <div className="bg-dark bg-opacity-50 rounded-4 p-4 mb-4">
                   <h4 className="text-info d-flex align-items-center mb-3">
@@ -78,7 +78,7 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* Diller Bölümü */}
+               
                 <div className="bg-dark bg-opacity-50 rounded-4 p-4">
                   <h4 className="text-info d-flex align-items-center mb-3">
                     <FaLanguage className="me-2" /> Diller

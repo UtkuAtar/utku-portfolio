@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // React Router Link
+import { Link } from "react-router-dom";
 import backgroundImage from "../assets/background.jpg";
 import MobileMenu from "../components/MobileMenu";
 
@@ -34,7 +34,7 @@ export default function Home() {
           Full Stack Geliştirici • SwiftUI ile modern iOS uygulama geliştirme • WEB geliştirme
         </p>
 
-        <Link to="/contact" className="btn btn-primary btn-lg my-3 w-100 w-md-auto">
+        <Link to="/contact" className="btn btn-primary btn-lg my-3 w-15 w-md-auto">
           İletişim İçin Tıkla!
         </Link>
 
